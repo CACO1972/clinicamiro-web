@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Added theme-color and improved viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#070709" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#F2EDE4" media="(prefers-color-scheme: light)" />
+    
+    <!-- Preconnect for fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    
+    <!-- Primary Meta Tags -->
+    <title>Clínica Miró | Odontología de Lujo y Excelencia en Santiago</title>
+    <meta name="title" content="Clínica Miró | Odontología de Lujo y Excelencia en Santiago" />
+    <meta name="description" content="Donde la ciencia se encuentra con la belleza de tu sonrisa. Especialistas en implantes y estética dental en Santiago, Chile." />
+    <meta name="keywords" content="odontología santiago, implantes dentales, estética dental, clínica dental lujo, odontólogo santiago, ortodoncia, carillas dentales" />
+    <meta name="author" content="Clínica Miró" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://clinicamiro.cl" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://clinicamiro.cl" />
+    <meta property="og:title" content="Clínica Miró | Odontología de Lujo y Excelencia en Santiago" />
+    <meta property="og:description" content="Donde la ciencia se encuentra con la belleza de tu sonrisa. Especialistas en implantes y estética dental." />
+    <meta property="og:image" content="https://clinicamiro.cl/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="es_CL" />
+    <meta property="og:site_name" content="Clínica Miró" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://clinicamiro.cl" />
+    <meta name="twitter:title" content="Clínica Miró | Odontología de Lujo y Excelencia en Santiago" />
+    <meta name="twitter:description" content="Donde la ciencia se encuentra con la belleza de tu sonrisa." />
+    <meta name="twitter:image" content="https://clinicamiro.cl/og-image.jpg" />
+
+    <!-- Schema Markup LocalBusiness & MedicalClinic -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalClinic",
+      "name": "Clínica Miró",
+      "image": "https://clinicamiro.cl/logo.png",
+      "description": "Donde la ciencia se encuentra con la belleza de tu sonrisa. Odontología de lujo asistida por tecnología en Santiago.",
+      "url": "https://clinicamiro.cl",
+      "telephone": "+56935572986",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Las Condes 12345",
+        "addressLocality": "Santiago",
+        "addressRegion": "Región Metropolitana",
+        "postalCode": "7550000",
+        "addressCountry": "CL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.4103,
+        "longitude": -70.5660
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "19:00"
+      },
+      "potentialAction": {
+        "@type": "ReserveAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://clinicamiro.cl/empezar"
+        },
+        "name": "Agendar Cita Online"
+      },
+      "priceRange": "$$$",
+      "medicalSpecialty": "Dentistry",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios Dentales",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Implantes Dentales",
+              "description": "Implant One - Implantes en un día con carga inmediata"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Estética Dental",
+              "description": "Revive FACE.SMILE™ - Diseño integral con IA"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ortodoncia",
+              "description": "ALIGN - Ortodoncia inteligente personalizada"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Prevención",
+              "description": "ZERO CARIES - Prevención regenerativa con IA"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+  </head>
+
+  <body>
+    <!-- Added skip link for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-gold focus:text-charcoal focus:rounded-md">
+      Saltar al contenido principal
+    </a>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
