@@ -19,7 +19,10 @@ import { PROMESA } from "@/lib/constants";
 // import HeroLogo from "@/components/HeroLogoV2";        // V2: Ondas fluidas + partículas
 // import HeroLogo from "@/components/HeroLogoV3";        // V3: Aurora boreal + vórtice
 // import HeroLogo from "@/components/HeroLogoHybrid";    // Híbrido: V2 + V3 combinados
-import HeroLogo from "@/components/HeroLogoUltimate";     // Ultimate: Spotlights + partículas + diamantes
+import HeroLogo from "@/components/HeroLogoUltimate";
+import DoctorSection from "@/components/DoctorSection";
+import LocationSection from "@/components/LocationSection";
+import WhatsAppFloat from "@/components/WhatsAppFloat";     // Ultimate: Spotlights + partículas + diamantes
 
 const routes = [
   {
@@ -141,6 +144,9 @@ const Index = () => {
             {/* Transparencia Section - Light transition */}
             <TransparenciaSection />
 
+            {/* Doctor / Equipo Section */}
+            <DoctorSection />
+
             {/* Testimonios en Video */}
             <TestimoniosVideo />
 
@@ -148,7 +154,13 @@ const Index = () => {
             <LeadMagnets />
           </main>
 
+          {/* Ubicación */}
+          <LocationSection />
+
           <Footer />
+
+          {/* WhatsApp Flotante */}
+          <WhatsAppFloat />
         </>
       )}
     </>
