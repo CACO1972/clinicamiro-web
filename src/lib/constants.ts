@@ -30,7 +30,7 @@ export const getWhatsAppURLWithDiagnostico = (programa: string, urgencia: string
 
 export const CLINICA_INFO: ClinicInfo = {
   nombre: "Clínica Miró",
-  tagline: "Donde la ciencia se encuentra con la belleza de tu sonrisa",
+  tagline: "Odontología Predictiva · Santiago, Chile",
   anosExperiencia: 18,
   direccion: "Av. Presidente Kennedy 5454, Of. 1203, Las Condes, Santiago",
   telefono: "+56 2 2345 6789",
@@ -52,10 +52,10 @@ export const CLINICA_INFO: ClinicInfo = {
 // ═══════════════════════════════════════════════════════════════
 
 export const PROMESA = {
-  titulo: "18 años transformando sonrisas",
-  subtitulo: "Renovación total + Inteligencia Artificial + Nuevas instalaciones",
+  titulo: "Odontología Predictiva",
+  subtitulo: "Anticipamos la enfermedad. Personalizamos el tratamiento. Documentamos cada decisión con evidencia.",
   puntos: [
-    "18 años de experiencia clínica de excelencia",
+    "30+ años de experiencia clínica. 11.000+ implantes documentados.",
     "Tecnología IA de última generación",
     "Instalaciones completamente renovadas",
     "Equipo de especialistas certificados",
