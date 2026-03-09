@@ -83,7 +83,7 @@ const Index = () => {
         <title>Clínica Miró | Odontología de Lujo y Excelencia en Santiago</title>
         <meta 
           name="description" 
-          content="Clínica Miró — Odontología Predictiva en Santiago. Ven a entender lo que realmente tienes. Sin sorpresas. Sin presiones. Plan claro, alternativas escritas, presupuesto desglosado." 
+          content="Clínica Miró — Odontología Predictiva en Santiago. Si entiendes lo que tienes, confías. Diagnóstico claro, alternativas escritas, presupuesto desglosado. Sin presiones." 
         />
         <link rel="canonical" href="https://clinicamiro.cl" />
       </Helmet>

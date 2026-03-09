@@ -52,8 +52,8 @@ export const CLINICA_INFO: ClinicInfo = {
 // ═══════════════════════════════════════════════════════════════
 
 export const PROMESA = {
-  titulo: "Ven a entender lo que realmente tienes.",
-  subtitulo: "Sin presiones. Sin sorpresas. Con datos, alternativas escritas y tiempo para decidir.",
+  titulo: "Si entiendes lo que tienes, confías.",
+  subtitulo: "Diagnóstico claro. Alternativas escritas. Tiempo para decidir. Sin presiones.",
   puntos: [
     "30+ años de experiencia clínica. 11.000+ implantes documentados.",
     "Tecnología IA de última generación",

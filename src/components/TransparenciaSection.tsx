@@ -48,11 +48,11 @@ const TransparenciaSection = () => {
             Por qué eligen Miró
           </p>
           <h2 className="font-serif text-3xl md:text-5xl mb-5 leading-tight" style={{ color: "#111" }}>
-            Viniste a entender,<br />
-            <span style={{ fontStyle: "italic", color: "rgba(196,162,101,1)" }}>no a que te convenzan.</span>
+            Si entiendes lo que tienes,<br />
+            <span style={{ fontStyle: "italic", color: "rgba(196,162,101,1)" }}>confías.</span>
           </h2>
           <p className="text-base md:text-lg max-w-xl mx-auto leading-relaxed" style={{ color: "rgba(17,17,17,0.52)", fontFamily: "'Outfit', sans-serif" }}>
-            La mayoría de nuestros pacientes llegaron con un presupuesto de otra clínica que no entendían. Eso no debería pasar. Aquí no pasa.
+            La mayoría de nuestros pacientes llegaron con un presupuesto de otra clínica que no entendían — y sin saber a quién creerle. Aquí el diagnóstico se explica, se escribe y se documenta. Tú decides.
           </p>
         </motion.div>
 
