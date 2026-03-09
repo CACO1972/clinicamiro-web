@@ -21,6 +21,7 @@ import { PROMESA } from "@/lib/constants";
 // import HeroLogo from "@/components/HeroLogoHybrid";    // Híbrido: V2 + V3 combinados
 import HeroLogo from "@/components/HeroLogoUltimate";
 import DoctorSection from "@/components/DoctorSection";
+import ModeloPredictivo from "@/components/ModeloPredictivo";
 import LocationSection from "@/components/LocationSection";
 import WhatsAppFloat from "@/components/WhatsAppFloat";     // Ultimate: Spotlights + partículas + diamantes
 
@@ -132,6 +133,9 @@ const Index = () => {
 
                 {/* Exclusivo Miró Section */}
                 <ExclusivoMiro />
+
+                {/* Modelo Predictivo 4P - basado en el paper científico */}
+                <ModeloPredictivo />
 
                 {/* Simulación Demo */}
                 <SimulacionDemo />
