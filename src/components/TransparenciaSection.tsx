@@ -1,119 +1,136 @@
 import { motion } from "framer-motion";
-import { Shield, CreditCard, FileText } from "lucide-react";
+import { FileText, Scale, MessageSquare } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const features = [
+const razones = [
   {
-    icon: Shield,
-    title: "Sin sorpresas",
-    description: "Presupuestos claros y detallados antes de cada tratamiento.",
+    icon: Scale,
+    title: "Tres dentistas, tres presupuestos distintos",
+    copy: "Es un hecho documentado: la variabilidad diagnóstica en odontología llega al 40%. En Miró usamos IA para que el criterio sea el mismo siempre — no la intuición del día.",
   },
   {
-    icon: CreditCard,
-    title: "Facilidades de pago",
-    description: "Opciones flexibles adaptadas a tus necesidades.",
+    icon: MessageSquare,
+    title: "\"No entendí por qué necesitaba todo eso\"",
+    copy: "El documento Explica te entrega por escrito el diagnóstico en lenguaje tuyo, las alternativas disponibles, los riesgos de cada una, y el presupuesto desglosado. Te lo llevas.",
   },
   {
     icon: FileText,
-    title: "Todo documentado",
-    description: "Acceso digital a tu historial y documentos.",
+    title: "\"Me dijeron que era urgente y tenía miedo\"",
+    copy: "La urgencia real siempre se documenta con datos. Radiografía aumentada, overlay visual de lo que se propone hacer, firma del clínico. Sin presión, con evidencia.",
   },
 ];
 
 const TransparenciaSection = () => {
   return (
     <section className="relative py-24 md:py-32 overflow-hidden">
-      {/* Transparent background - relies on ScrollBackground ivory layer */}
 
-      {/* Subtle lilac ambient glow */}
-      <div 
-        className="absolute top-[10%] right-[20%] w-[400px] h-[400px] rounded-full opacity-30"
-        style={{
-          background: "radial-gradient(ellipse at center, rgba(155, 138, 165, 0.10) 0%, transparent 60%)",
-          filter: "blur(60px)",
-        }}
+      {/* Ambient */}
+      <div
+        className="absolute top-[10%] right-[20%] w-[400px] h-[400px] rounded-full opacity-20 pointer-events-none"
+        style={{ background: "radial-gradient(ellipse at center, rgba(196,162,101,0.08) 0%, transparent 65%)", filter: "blur(60px)" }}
+      />
+      <div
+        className="absolute top-[22%] left-1/2 -translate-x-1/2 w-[30%] h-px"
+        style={{ background: "linear-gradient(90deg, transparent, rgba(196,162,101,0.3), transparent)" }}
       />
 
-      {/* Gold accent line at transition point */}
-      <div 
-        className="absolute top-[22%] left-1/2 -translate-x-1/2 w-[30%] h-[1px]"
-        style={{
-          background: `linear-gradient(90deg, transparent 0%, rgba(196, 162, 101, 0.35) 50%, transparent 100%)`,
-        }}
-      />
+      <div className="container max-w-4xl mx-auto px-4 relative z-10 pt-8">
 
-      <div className="container max-w-4xl mx-auto px-4 relative z-10 pt-16">
+        {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-14"
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.7 }}
+          className="text-center mb-16"
         >
-          <p 
-            className="uppercase tracking-[0.25em] text-xs font-sans font-medium mb-4"
-            style={{ color: "rgba(196, 162, 101, 0.85)" }}
-          >
-            Nuestro Compromiso
+          <p className="uppercase tracking-[0.25em] text-xs font-mono mb-5" style={{ color: "rgba(196,162,101,0.75)" }}>
+            Por qué eligen Miró
           </p>
-          <h2 
-            className="font-serif text-3xl md:text-4xl mb-4"
-            style={{ color: "#111111" }}
-          >
-            Transparencia <span style={{ fontStyle: "italic", color: "rgba(196, 162, 101, 1)" }}>Total</span>
+          <h2 className="font-serif text-3xl md:text-5xl mb-5 leading-tight" style={{ color: "#111" }}>
+            Viniste a entender,<br />
+            <span style={{ fontStyle: "italic", color: "rgba(196,162,101,1)" }}>no a que te convenzan.</span>
           </h2>
-          <p 
-            className="text-base md:text-lg max-w-md mx-auto"
-            style={{ color: "rgba(17, 17, 17, 0.60)" }}
-          >
-            Aranceles claros y financiamiento accesible
+          <p className="text-base md:text-lg max-w-xl mx-auto leading-relaxed" style={{ color: "rgba(17,17,17,0.52)", fontFamily: "'Outfit', sans-serif" }}>
+            La mayoría de nuestros pacientes llegaron con un presupuesto de otra clínica que no entendían. Eso no debería pasar. Aquí no pasa.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
-          {features.map((feature, index) => (
+        {/* Cards — las 3 situaciones del paciente defraudado */}
+        <div className="flex flex-col gap-5 mb-16">
+          {razones.map((r, i) => (
             <motion.div
-              key={feature.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
-              className="text-center p-6 md:p-8 rounded-xl"
+              key={r.title}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.55, delay: i * 0.12 }}
+              className="flex items-start gap-5 p-6 md:p-8 rounded-xl"
               style={{
-                background: "rgba(242, 237, 228, 0.85)",
-                border: "1px solid rgba(196, 162, 101, 0.25)",
-                boxShadow: "0 4px 24px rgba(155, 138, 165, 0.08), 0 1px 3px rgba(0,0,0,0.04)",
+                background: "rgba(255,255,255,0.7)",
+                border: "1px solid rgba(196,162,101,0.18)",
                 backdropFilter: "blur(8px)",
-                transition: "all 0.3s ease",
-              }}
-              whileHover={{
-                y: -4,
-                boxShadow: "0 8px 32px rgba(196, 162, 101, 0.12), 0 2px 6px rgba(0,0,0,0.06)",
               }}
             >
-              <div 
-                className="inline-flex items-center justify-center w-12 h-12 rounded-lg mb-5"
-                style={{
-                  background: "rgba(196, 162, 101, 1)",
-                  boxShadow: "0 4px 12px rgba(196, 162, 101, 0.25)",
-                }}
+              <div
+                className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"
+                style={{ background: "rgba(196,162,101,0.1)", border: "1px solid rgba(196,162,101,0.22)" }}
               >
-                <feature.icon className="w-5 h-5" style={{ color: "#111111" }} />
+                <r.icon size={18} style={{ color: "rgba(196,162,101,0.85)" }} />
               </div>
-              <h3 
-                className="font-serif text-lg md:text-xl mb-3"
-                style={{ color: "#111111" }}
-              >
-                {feature.title}
-              </h3>
-              <p 
-                className="text-sm leading-relaxed"
-                style={{ color: "rgba(17, 17, 17, 0.60)" }}
-              >
-                {feature.description}
-              </p>
+              <div>
+                <h3 className="font-serif text-lg md:text-xl mb-2" style={{ color: "#111" }}>
+                  {r.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: "rgba(17,17,17,0.52)", fontFamily: "'Outfit', sans-serif" }}>
+                  {r.copy}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>
+
+        {/* CTA central */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center"
+        >
+          <p className="font-serif text-xl md:text-2xl italic mb-2" style={{ color: "rgba(17,17,17,0.65)" }}>
+            "Cuando un paciente entiende su diagnóstico y sus opciones,{" "}
+            <span style={{ color: "rgba(196,162,101,0.9)" }}>confía.</span>"
+          </p>
+          <p className="text-xs font-mono tracking-[0.15em] mb-8" style={{ color: "rgba(17,17,17,0.28)" }}>
+            — DR. CARLOS MONTOYA · DIRECTOR CLÍNICO
+          </p>
+
+          <Link
+            to="/segunda-opinion"
+            className="inline-flex items-center gap-3 px-8 py-4 rounded-xl font-sans text-sm font-medium transition-all duration-300"
+            style={{
+              background: "rgba(196,162,101,0.1)",
+              border: "1px solid rgba(196,162,101,0.4)",
+              color: "rgba(196,162,101,0.9)",
+            }}
+            onMouseEnter={e => {
+              (e.currentTarget as HTMLElement).style.background = "rgba(196,162,101,0.18)";
+              (e.currentTarget as HTMLElement).style.borderColor = "rgba(196,162,101,0.6)";
+            }}
+            onMouseLeave={e => {
+              (e.currentTarget as HTMLElement).style.background = "rgba(196,162,101,0.1)";
+              (e.currentTarget as HTMLElement).style.borderColor = "rgba(196,162,101,0.4)";
+            }}
+          >
+            Trae tu presupuesto — lo revisamos juntos
+          </Link>
+
+          <p className="mt-3 text-xs font-mono" style={{ color: "rgba(17,17,17,0.22)", letterSpacing: "0.1em" }}>
+            Segunda Opinión · Sin costo · Sin compromiso
+          </p>
+        </motion.div>
+
       </div>
     </section>
   );

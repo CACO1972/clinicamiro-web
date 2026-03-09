@@ -48,7 +48,7 @@ const DoctorSection = () => {
                 color: "var(--hm-mid-gray, #999)",
               }}
             >
-              "Cuando un paciente entiende su diagnóstico y sus opciones, confía."
+              "La confianza no se pide. Se construye con datos, tiempo y transparencia."
             </p>
             <p className="text-sm leading-relaxed text-muted-foreground mb-8 max-w-md">
               Director clínico de Clínica Miró desde 2008. Más de 30 años de

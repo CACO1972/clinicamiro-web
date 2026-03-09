@@ -52,8 +52,8 @@ export const CLINICA_INFO: ClinicInfo = {
 // ═══════════════════════════════════════════════════════════════
 
 export const PROMESA = {
-  titulo: "Odontología Predictiva",
-  subtitulo: "Anticipamos la enfermedad. Personalizamos el tratamiento. Documentamos cada decisión con evidencia.",
+  titulo: "Ven a entender lo que realmente tienes.",
+  subtitulo: "Sin presiones. Sin sorpresas. Con datos, alternativas escritas y tiempo para decidir.",
   puntos: [
     "30+ años de experiencia clínica. 11.000+ implantes documentados.",
     "Tecnología IA de última generación",
