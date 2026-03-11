@@ -1,5 +1,3 @@
-"use client"
-
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import { motion, AnimatePresence } from "framer-motion"
@@ -12,6 +10,7 @@ const navItems = [
   { label: "Nuevo Paciente", to: "/empezar" },
   { label: "Segunda Opinión", to: "/segunda-opinion" },
   { label: "Portal", to: "/portal" },
+  { label: "Agendar", to: "/agendar" },
 ]
 
 const Header = () => {
@@ -191,22 +190,23 @@ const Header = () => {
               <Phone className="w-4 h-4" aria-hidden="true" />
               <span className="hidden xl:inline">+56 9 3557 2986</span>
             </motion.a>
-            <motion.button
-              className="flex items-center gap-2 px-5 py-2.5 text-sm font-medium rounded-full text-background focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-charcoal"
-              style={{
-                background: "linear-gradient(135deg, hsl(40, 45%, 58%) 0%, hsl(40, 50%, 50%) 100%)",
-                boxShadow: isScrolled ? "0 4px 25px rgba(196, 162, 101, 0.35)" : "0 4px 20px rgba(196, 162, 101, 0.25)",
-              }}
-              whileHover={{
-                scale: 1.03,
-                boxShadow: "0 6px 30px rgba(196, 162, 101, 0.4)",
-              }}
-              whileTap={{ scale: 0.98 }}
-              onClick={() => alert("Integración Dentalink próximamente")}
-            >
-              <Calendar className="w-4 h-4" aria-hidden="true" />
-              Agendar
-            </motion.button>
+            <Link to="/agendar" aria-label="Agendar cita en Clínica Miró">
+              <motion.div
+                className="flex items-center gap-2 px-5 py-2.5 text-sm font-medium rounded-full text-white cursor-pointer focus:outline-none focus:ring-2 focus:ring-electric-blue focus:ring-offset-2 focus:ring-offset-charcoal"
+                style={{
+                  background: "linear-gradient(135deg, #0066FF 0%, #0052CC 100%)",
+                  boxShadow: isScrolled ? "0 4px 25px rgba(0, 102, 255, 0.35)" : "0 4px 20px rgba(0, 102, 255, 0.25)",
+                }}
+                whileHover={{
+                  scale: 1.03,
+                  boxShadow: "0 6px 30px rgba(0, 102, 255, 0.4)",
+                }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <Calendar className="w-4 h-4" aria-hidden="true" />
+                Agendar
+              </motion.div>
+            </Link>
           </div>
 
           {/* Mobile menu button - Creative hamburger */}
@@ -337,16 +337,18 @@ const Header = () => {
                   <Phone className="w-5 h-5" aria-hidden="true" />
                   +56 9 3557 2986
                 </a>
-                <button
-                  className="w-full flex items-center justify-center gap-2 px-6 py-4 text-base font-medium rounded-xl text-background focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-charcoal"
+                <Link
+                  to="/agendar"
+                  className="w-full flex items-center justify-center gap-2 px-6 py-4 text-base font-medium rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-electric-blue/50"
                   style={{
-                    background: "linear-gradient(135deg, hsl(40, 45%, 58%) 0%, hsl(40, 50%, 50%) 100%)",
+                    background: "linear-gradient(135deg, #0066FF 0%, #0052CC 100%)",
                   }}
-                  onClick={() => alert("Integración Dentalink próximamente")}
+                  onClick={() => setMobileMenuOpen(false)}
+                  aria-label="Agendar cita en Clínica Miró"
                 >
                   <Calendar className="w-5 h-5" aria-hidden="true" />
                   Agendar Cita
-                </button>
+                </Link>
               </motion.div>
             </motion.nav>
           </motion.div>

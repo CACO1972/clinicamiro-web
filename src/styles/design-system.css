@@ -1,0 +1,230 @@
+/* ═══════════════════════════════════════════════════════════════
+   CLÍNICA MIRÓ — DESIGN SYSTEM v2.0
+   Deep Medical Intelligence Palette
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Nueva paleta: Deep Medical Intelligence */
+  --obsidian: #080A0F;
+  --deep-space: #0D1117;
+  --navy-deep: #0A1628;
+  --electric-blue: #0066FF;
+  --electric-blue-glow: #0066FF33;
+  --cyan-ai: #00D4FF;
+  --cyan-glow: #00D4FF22;
+  --violet-premium: #7B2FFF;
+  --violet-glow: #7B2FFF33;
+  --arctic-white: #F0F6FF;
+  --steel: #8BA3C7;
+  --steel-dim: #4A6080;
+  --success-emerald: #00C896;
+  --warning-amber: #FFB800;
+  --error-coral: #FF4D6D;
+
+  /* Tipografía */
+  --font-display: 'Syne', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Gradients */
+  --gradient-hero: linear-gradient(135deg, var(--electric-blue) 0%, var(--cyan-ai) 100%);
+  --gradient-violet: linear-gradient(135deg, var(--violet-premium) 0%, var(--electric-blue) 100%);
+  --gradient-dark: linear-gradient(180deg, var(--obsidian) 0%, var(--navy-deep) 100%);
+
+  /* Shadows */
+  --shadow-blue: 0 0 40px var(--electric-blue-glow);
+  --shadow-blue-intense: 0 0 60px rgba(0, 102, 255, 0.4);
+  --shadow-cyan: 0 0 30px var(--cyan-glow);
+  --shadow-violet: 0 0 40px var(--violet-glow);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   TYPOGRAPHY UTILITIES
+   ═══════════════════════════════════════════════════════════════ */
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   GRADIENT TEXT UTILITIES
+   ═══════════════════════════════════════════════════════════════ */
+
+.text-gradient-blue {
+  background: var(--gradient-hero);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% auto;
+  animation: text-shimmer 4s linear infinite;
+}
+
+.text-gradient-violet {
+  background: var(--gradient-violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes text-shimmer {
+  0% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   GLASS MORPHISM
+   ═══════════════════════════════════════════════════════════════ */
+
+.glass-blue {
+  background: rgba(0, 102, 255, 0.08);
+  border: 1px solid rgba(0, 102, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-cyan {
+  background: rgba(0, 212, 255, 0.06);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-dark {
+  background: rgba(8, 10, 15, 0.8);
+  border: 1px solid rgba(139, 163, 199, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BUTTON STYLES
+   ═══════════════════════════════════════════════════════════════ */
+
+.btn-electric {
+  background: var(--electric-blue);
+  color: white;
+  border: none;
+  padding: 0.875rem 2rem;
+  border-radius: 0.75rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px var(--electric-blue-glow);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-electric::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  transform: translateX(-100%);
+  animation: shimmer-btn 3s linear infinite;
+}
+
+@keyframes shimmer-btn {
+  100% { transform: translateX(100%); }
+}
+
+.btn-electric:hover {
+  background: #0052cc;
+  box-shadow: 0 6px 30px rgba(0, 102, 255, 0.5);
+  transform: translateY(-1px);
+}
+
+.btn-outline-cyan {
+  background: transparent;
+  color: var(--cyan-ai);
+  border: 1px solid rgba(0, 212, 255, 0.4);
+  padding: 0.875rem 2rem;
+  border-radius: 0.75rem;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.9375rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-cyan:hover {
+  background: var(--cyan-glow);
+  border-color: var(--cyan-ai);
+  box-shadow: var(--shadow-cyan);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   ANIMATED BADGES
+   ═══════════════════════════════════════════════════════════════ */
+
+.badge-float {
+  animation: badge-float 6s ease-in-out infinite;
+}
+
+.badge-float:nth-child(2) {
+  animation-delay: -2s;
+}
+
+.badge-float:nth-child(3) {
+  animation-delay: -4s;
+}
+
+@keyframes badge-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SCROLL INDICATOR
+   ═══════════════════════════════════════════════════════════════ */
+
+.scroll-indicator {
+  animation: scroll-bounce 2s ease-in-out infinite;
+}
+
+@keyframes scroll-bounce {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(8px); opacity: 0.5; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   GLOW EFFECTS
+   ═══════════════════════════════════════════════════════════════ */
+
+.glow-blue {
+  box-shadow: var(--shadow-blue);
+}
+
+.glow-cyan {
+  box-shadow: var(--shadow-cyan);
+}
+
+.glow-violet {
+  box-shadow: var(--shadow-violet);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SECTION BACKGROUNDS
+   ═══════════════════════════════════════════════════════════════ */
+
+.bg-obsidian {
+  background-color: var(--obsidian);
+}
+
+.bg-deep-space {
+  background-color: var(--deep-space);
+}
+
+.bg-navy-deep {
+  background-color: var(--navy-deep);
+}

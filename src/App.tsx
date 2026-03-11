@@ -16,6 +16,9 @@ const PortalPaciente = lazy(() => import("./pages/PortalPaciente"))
 const PortalProfesional = lazy(() => import("./pages/PortalProfesional"))
 const Auth = lazy(() => import("./pages/Auth"))
 const Gracias = lazy(() => import("./pages/Gracias"))
+const Agendar = lazy(() => import("./pages/Agendar"))
+const PagoExitoso = lazy(() => import("./pages/PagoExitoso"))
+const PagoFallido = lazy(() => import("./pages/PagoFallido"))
 const Implantes = lazy(() => import("./pages/servicios/Implantes"))
 const Ortodoncia = lazy(() => import("./pages/servicios/Ortodoncia"))
 const EsteticaDental = lazy(() => import("./pages/servicios/EsteticaDental"))
@@ -50,6 +53,9 @@ const App = () => (
               {/* Main */}
               <Route path="/" element={<Index />} />
               <Route path="/empezar" element={<Empezar />} />
+              <Route path="/agendar" element={<Agendar />} />
+              <Route path="/pago-exitoso" element={<PagoExitoso />} />
+              <Route path="/pago-fallido" element={<PagoFallido />} />
               <Route path="/segunda-opinion" element={<SegundaOpinion />} />
               <Route path="/gracias" element={<Gracias />} />
               
